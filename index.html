@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label for="name" id="n1">First Name:</label>
+        <input type="text" id="ip1"/><br><br>
+        <label for="name" id="n2">Second Name:</label>
+        <input type="text" id="ip2"/><br><br>
+        <label for="name" id="n3">Qualification:</label>
+        <input type="text" id="ip3"/><br><br>
+        <label for="name" id="n4">Role:</label>
+        <input type="text" id="ip4"/><br><br>
+        <label for="name" id="n5">Institute:</label>
+        <input type="text" id="ip5"/><br><br>
+        <label for="name" id="n6">Contact:</label>
+        <input type="text" id="ip6"/>
+    
+    <input type="submit">
+
+</form>
+    <div id="result"></div>
+
+    <script>
+        let form=document.getElementById("form")
+        form.addEventListener("submit",event=>{
+            event.preventDefault();
+            let ip1 = document.getElementById("ip1").value;
+            let ip2 = document.getElementById("ip2").value;
+            let ip3 = document.getElementById("ip3").value;
+            let ip4 = document.getElementById("ip4").value;
+            let ip5 = document.getElementById("ip5").value;
+            let ip6 = document.getElementById("ip6").value;
+            let idCard = document.getElementById('id-card')
+            result.style.display = "block"; 
+            result.style.textAlign="center"
+            result.style.background="aqua";
+              result.style.border = "2px solid black";
+              result.style.borderRadius = "10px";
+                result.style.padding = "20px";
+           result.style.width = "250px";
+                  result.style.height = "500px";
+
+            result.innerHTML = `<img src="https://tse2.mm.bing.net/th?id=OIP.B2jFaW6yXI91m69VqFOjAAHaGM&pid=Api&P=0&h=220">
+                <p>First Name: ${ip1}</p>
+                <p>Second Name: ${ip2}</p>
+                <p>Qualification: ${ip3}</p>
+                <p>Role: ${ip4}</p>
+                <p>Institute: ${ip5}</p>
+                <p>Contact: ${ip6}</p>
+            `;
+           
+         })
+         </script>
+       
+
+
+
+
+</body>
+</html>
